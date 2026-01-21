@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bl8s8jsdgs7fb"
+path="res://.godot/imported/fakakta suits.wav-f7f27b344994ca72886a891848bc1972.sample"
+
+[deps]
+
+source_file="res://sounds/voice/fakakta suits.wav"
+dest_files=["res://.godot/imported/fakakta suits.wav-f7f27b344994ca72886a891848bc1972.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
