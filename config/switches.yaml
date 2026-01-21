@@ -1,0 +1,177 @@
+#config_version=6
+
+#switches:
+#    switch_one:
+#        number: cab-8
+#        debounce: quick           # default 'quick' debounce times
+#    switch_two:
+#        number: cab-16
+#        debounce: normal          # default 'normal' debounce times
+#    switch_three:
+#        number: play-4
+#        platform_settings:        # use this to specify non-default debounce times
+#            debounce_open: 5ms
+#            debounce_close: 20ms
+#    opto_switch_one:
+#        number: play-11           # debounce times will be 'normal' since it is not specified for this switch
+#        type: NC                  # normally closed
+
+switches:
+    s_left_flipper_button:
+        number: cab2408-0
+        debounce: quick
+        tags: left_flipper
+    s_left_flipper_eos:
+        number: play3208-9
+    s_left_upper_flipper_button:
+        number: cab2408-1
+        debounce: quick
+        tags: left_upper_flipper
+    s_left_upper_flipper_eos:
+        number: play3208-10
+    s_right_flipper_button:
+        number: cab2408-2
+        debounce: quick
+        tags: right_flipper
+    s_right_flipper_eos:
+        number: play3208-11
+    s_right_upper_flipper_button:
+        number: cab2408-3
+        debounce: quick
+        tags: right_upper_flipper
+    s_right_upper_flipper_eos:
+        number: play3208-12
+    s_left_slingshot:
+        number: play3208-0
+        debounce: quick
+    s_right_slingshot:
+        number: play3208-1
+        debounce: quick
+    s_ball_trough_one:
+        number: play3208-2
+        type: NC
+    s_ball_trough_two:
+        number: play3208-3
+        type: NC
+    s_ball_trough_three:
+        number: play3208-4
+        type: NC
+    s_ball_trough_four:
+        number: play3208-5
+        type: NC
+    s_ball_trough_five:
+        number: play3208-6
+        type: NC
+    s_ball_trough_six:
+        number: play3208-7
+        type: NC
+    s_ball_trough_jam:
+        number: play3208-8
+        type: NC
+    s_plunger_lane:
+        number: play3208-13
+        platform_settings:
+           debounce_open: 5ms
+           debounce_close: 20ms
+#    s_magnet_button
+#        number: cab2408-4
+#    s_left_outlane
+#        number: 
+#    s_left_inlane
+#        number: 
+#    s_right_inlane
+#        number: 
+#    s_right_outlane
+#        number: 
+#    s_left_saucer
+#        number: 
+#    s_right_saucer
+#        number: 
+#    s_room35_target_R
+#        number: 
+#        debounce: quick
+#        ignore_window_ms: 1000ms
+#    s_room35_target_O
+#        number: 
+#        debounce: quick
+#        ignore_window_ms: 1000ms
+#    s_room35_target_OO
+#        number: 
+#        debounce: quick
+#        ignore_window_ms: 1000ms
+#    s_room35_target_M
+#        number: 
+#        debounce: quick
+#        ignore_window_ms: 1000ms
+#    s_room35_target_3
+#        number: 
+#        debounce: quick
+#        ignore_window_ms: 1000ms
+#    s_room35_target_5
+#        number: 
+#        debounce: quick
+#        ignore_window_ms: 1000ms
+#    s_klaus_target_K
+#        number: 
+#        debounce: quick
+#        ignore_window_ms: 1000ms
+#    s_klaus_target_L
+#        number: 
+#        debounce: quick
+#        ignore_window_ms: 1000ms
+#    s_klaus_target_A
+#        number: 
+#        debounce: quick
+#        ignore_window_ms: 1000ms
+#    s_klaus_target_U
+#        number: 
+#        debounce: quick
+#        ignore_window_ms: 1000ms
+#    s_klaus_target_S
+#        number: 
+#        debounce: quick
+#        ignore_window_ms: 1000ms
+#    s_beer_target
+#        number: 
+#        debounce: quick
+#        ignore_window_ms: 1000ms
+#    s_squirrel_mech
+#        number: 
+#    s_scoop_front
+#        number: 
+#    s_scoop_rear
+#        number: 
+#    s_left_ramp
+#        number: 
+#    s_right_ramp
+#        number: 
+#    s_dh_charger_one
+#        number: 
+#    s_dh_charger_two
+#        number: 
+#    s_spinner
+#        number: 
+#    s_center_lane_exit
+#        number: 
+#    s_left_orbit
+#        number: 
+#    s_right_orbit
+#        number: 
+#    s_pop_bumper_entry_lane
+#        number: 
+#    s_pop_bumper_G
+#        number: 
+#    s_pop_bumper_U
+#        number: 
+#    s_pop_bumper_Y
+#        number: 
+#    s_yeti_drop_target
+#        number: 
+#    s_heli_trough_one
+#        number: 
+#    s_heli_trough_two
+#        number: 
+#    s_heli_trough_three
+#        number: 
+#    s_heli_trough_four
+#        number: 

@@ -1,0 +1,132 @@
+#config_version=6
+
+#coils:
+#  some_coil:
+#    number: play3208-1              # name_of_io_board, driver 1
+#    default_pulse_ms: 10ms          # 0-255ms / this is the length of the initial coil pulse
+#    default_pulse_power: 1.0        # 0.0-1.0 / this is the power of the initial pulse expressed as a decimal up to 1.0
+#    default_hold_power: 0.5         # 0.0-1.0 / this if the hold power expressed as a decimal up to 1.0
+#    platform_settings:              # These are FAST-specific settings
+#      recycle_ms: 20ms              # 0-255ms / how long until the coil can fire again, start with double the pulse time
+#      pwm2_ms: 15ms                 # 0-25500ms / how long the hold time of the coil is
+#    max_pulse_ms: None
+#    max_pulse_power: 1.0
+#    max_hold_duration: None
+#    max_hold_power: 1.0
+
+coils:                                # need 20 total coil drivers from FAST pinball platform
+    c_flipper_left_main:
+        number: play3208-0
+        default_pulse_ms: 10
+    c_flipper_left_hold:
+        number: play3208-1
+        allow_enable: true
+    c_flipper_right_main:
+        number: play3208-2
+        default_pulse_ms: 10
+    c_flipper_right_hold:
+        number: play3208-3
+        allow_enable: true
+    c_flipper_left_upper_main:
+        number: play0804-0
+        default_pulse_ms: 10
+    c_flipper_left_upper_hold:
+        number: play0804-1
+        allow_enable: true
+    c_flipper_right_upper_main:
+        number: play0804-2
+        default_pulse_ms: 10
+    c_flipper_right_upper_hold:
+        number: play0804-3
+        allow_enable: true
+    c_left_slingshot:
+        number: play3208-4
+        default_pulse_ms: 15
+        platform_settings:
+            recycle_ms: 40
+    c_right_slingshot:
+        number: play3208-5
+        default_pulse_ms: 15
+        platform_settings:
+            recycle_ms: 40
+    c_trough_eject:
+        number: play3208-6
+        default_pulse_ms: 20
+        platform_settings:
+            recycle_ms: 10ms          # this is the cooldown time of the coil before it can fire again
+            pwm2_ms: 15ms             # this is how long the hold time of the coil is
+#    c_autolauncher:
+#        number:
+#        default_pulse_ms: 20
+#    c_pop_bumper_G:
+#        number: 
+#        default_pulse_ms: 20
+#    c_pop_bumper_U:
+#        number: 
+#        default_pulse_ms: 20
+#    c_pop_bumper_Y:
+#        number: 
+#        default_pulse_ms: 20
+#    c_reset_yeti_drop_target:
+#        number:
+#        default_pulse:
+#    c_scoop_eject:
+#        number: 
+#        default_pulse_ms: 15
+#    c_left_saucer_eject:
+#        number: 
+#        default_pulse_ms: 10
+#    c_right_saucer_eject:
+#        number: 
+#        default_pulse_ms: 10
+#    c_downhillium_magnet:
+#        number:
+
+autofire_coils:
+    ac_left_slingshot:
+        coil: c_left_slingshot
+        switch: s_left_slingshot
+        enable_events: machine_reset_phase_3
+    ac_right_slingshot:
+        coil: c_right_slingshot
+        switch: s_right_slingshot
+        enable_events: machine_reset_phase_3
+#    ac_pop_bumper_G:
+#        coil: c_pop_bumper_G
+#        switch: s_pop_bumper_G
+#    ac_pop_bumper_U:
+#        coil: c_pop_bumper_U
+#        switch: s_pop_bumper_U
+#    ac_pop_bumper_Y:
+#        coil: c_pop_bumper_Y
+#        switch: s_pop_bumper_Y
+
+flippers:
+    left_flipper:
+        main_coil: c_flipper_left_main
+        hold_coil: c_flipper_left_hold
+        activation_switch: s_left_flipper_button
+        eos_switch: s_left_flipper_eos
+        use_eos: true
+        enable_events: machine_reset_phase_3 # this command automatically enables flippers before game start
+    right_flipper:
+        main_coil: c_flipper_right_main
+        hold_coil: c_flipper_right_hold
+        activation_switch: s_right_flipper_button
+        eos_switch: s_right_flipper_eos
+        use_eos: true
+        enable_events: machine_reset_phase_3 # this command automatically enables flippers before game start
+    left_upper_flipper:
+        main_coil: c_flipper_left_upper_main
+        hold_coil: c_flipper_left_upper_hold
+        activation_switch: s_left_upper_flipper_button
+        eos_switch: s_left_upper_flipper_eos
+        use_eos: true
+        enable_events: machine_reset_phase_3 # this command automatically enables flippers before game start
+    right_upper_flipper:
+        main_coil: c_flipper_right_upper_main
+        hold_coil: c_flipper_right_upper_hold
+        activation_switch: s_right_upper_flipper_button
+        eos_switch: s_right_upper_flipper_eos
+        use_eos: true
+        enable_events: machine_reset_phase_3 # this command automatically enables flippers before game start
