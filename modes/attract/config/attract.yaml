@@ -3,6 +3,15 @@
 # Attract mode that starts when the machine boots up, stops
 # whenever a game is started, and re-starts after the game ends.
 
+mode_settings:
+  selectable_items:
+    - title
+    - credits
+    - mpf_logo
+    - godot_logo
+  next_item_events: s_right_flipper_button_active
+  previous_item_events: s_left_flipper_button_active
+
 slide_player:
   mode_attract_started: attract
 

@@ -20,54 +20,56 @@ modes:
 
 playfields:
     playfield:
-        default_source_device: bd_plunger
+        default_source_device: bd_trough # or bd_plunger not totally sure yet
         tags: default
 
-hardware:
-    platform: fast
+virtual_platform_start_active_switches: s_ball_trough_one, s_ball_trough_two, s_ball_trough_three, s_ball_trough_four, s_ball_trough_five, s_ball_trough_six, s_ball_trough_jam
 
-fast:
-    net:
-        controller: neuron
+#hardware:
+#    platform: fast
 
-        # all of the io boards go here
-        # the order is the order the boards are physically connected in the loop
-        io_loop:
-            cab2408: 
-                model: FP-I/O-0024
-                order: 1
-            play0804: 
-                model: FP-I/O-0804
-                order: 2
-            play3208: 
-                model: FP-I/O-3208
-                order: 3
-
-        # these are default settings
-        # port: auto
-        # baud: 921600
-        # debug: false
-        watchdog: 1000ms
-
-        # these set the default settings for 'quick' and 'normal' switch debounce times
-        default_quick_debounce_open: 2ms
-        default_quick_debounce_close: 2ms
-        default_normal_debounce_open: 4ms
-        default_normal_debounce_close: 4ms
-
-    # all of the expansion boards go here
-    # not sure yet about the shaker motor expansion board
-    exp: 
-        boards:
-            playfield_exp_one: 
-                model: FP-EXP-0081
-                led_hz: 30            # this is how often the board sends updates to the LED
-                led_fade_time: 96ms  # 0-8191ms / this is independent of MPF software fade times / use a multiple of 32
-            neuron: 
-                model: FP-EXP-2000  # this is the built in expansion board on the neuron controller
-            # shaker_exp: 
-            #     model: FP-EXP-1313
-
+#fast:
+#    net:
+#        controller: neuron
+#
+#        # all of the io boards go here
+#        # the order is the order the boards are physically connected in the loop
+#        io_loop:
+#            cab2408: 
+#                model: FP-I/O-0024
+#                order: 1
+#            play0804: 
+#                model: FP-I/O-0804
+#                order: 2
+#            play3208: 
+#                model: FP-I/O-3208
+#                order: 3
+#
+#        # these are default settings
+#        # port: auto
+#        # baud: 921600
+#        # debug: false
+#        watchdog: 1000ms
+#
+#        # these set the default settings for 'quick' and 'normal' switch debounce times
+#        default_quick_debounce_open: 2ms
+#        default_quick_debounce_close: 2ms
+#        default_normal_debounce_open: 4ms
+#        default_normal_debounce_close: 4ms
+#
+#    # all of the expansion boards go here
+#    # not sure yet about the shaker motor expansion board
+#    exp: 
+#        boards:
+#            playfield_exp_one: 
+#                model: FP-EXP-0081
+#                led_hz: 30            # this is how often the board sends updates to the LED
+#                led_fade_time: 96ms  # 0-8191ms / this is independent of MPF software fade times / use a multiple of 32
+#            neuron: 
+#                model: FP-EXP-2000  # this is the built in expansion board on the neuron controller
+#            shaker_exp: 
+#                model: FP-EXP-1313
+#
     # these are all of the default settings for the FAST audio interface
     #aud:
     #    port: auto
@@ -118,54 +120,52 @@ fast:
     #    pin6_pulse_time: 100
     #    reset_pulse_time: 100
     #    power_pulse_time: 100
-
-    aud:
-        port: auto
-        debug: false
-
-        main_amp_enabled: true
-        sub_amp_enabled: true
-        headphones_amp_enabled: true
-
-        main_steps: 20
-        sub_steps: 20
-        headphones_steps: 20
-
-        default_main_volume: 10
-        default_sub_volume: 10
-        default_headphones_volume: 10
-
-        persist_volume_settings: true
-
-        max_hw_volume_main: 63
-        max_hw_volume_sub: 63
-        max_hw_volume_headphones: 63
-
-        main_levels_list: None
-        sub_levels_list: None
-        headphones_levels_list: None
-
-        link_sub_to_main: true
-        link_headphones_to_main: false
-
-        headphones_level: headphones
-        mute_speakers_with_headphones: true
-
-        pin1_pulse_time: 100
-        pin2_pulse_time: 100
-        pin3_pulse_time: 100
-        pin4_pulse_time: 100
-        pin5_pulse_time: 100
-        pin6_pulse_time: 100
-        reset_pulse_time: 100
-        power_pulse_time: 100
-
+#
+#    aud:
+#        port: auto
+#        debug: false
+#
+#        main_amp_enabled: true
+#        sub_amp_enabled: true
+#        headphones_amp_enabled: true
+#
+#        main_steps: 20
+#        sub_steps: 20
+#        headphones_steps: 20
+#
+#        default_main_volume: 10
+#        default_sub_volume: 10
+#        default_headphones_volume: 10
+#
+#        persist_volume_settings: true
+#
+#        max_hw_volume_main: 63
+#        max_hw_volume_sub: 63
+#        max_hw_volume_headphones: 63
+#
+#        main_levels_list: None
+#        sub_levels_list: None
+#        headphones_levels_list: None
+#
+#        link_sub_to_main: true
+#        link_headphones_to_main: false
+#
+#        headphones_level: headphones
+#        mute_speakers_with_headphones: true
+#
+#        pin1_pulse_time: 100
+#        pin2_pulse_time: 100
+#        pin3_pulse_time: 100
+#        pin4_pulse_time: 100
+#        pin5_pulse_time: 100
+#        pin6_pulse_time: 100
+#        reset_pulse_time: 100
+#        power_pulse_time: 100
+#
 #displays:
 #    window:
 #        width: 1920
 #        height: 1080
-
-virtual_platform_start_active_switches: s_ball_trough_one, s_ball_trough_two, s_ball_trough_three, s_ball_trough_four, s_ball_trough_five, s_ball_trough_six, s_ball_trough_jam
 
 #drop_targets:
 #    yeti_smart_drop_target:

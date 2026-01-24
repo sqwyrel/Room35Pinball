@@ -17,6 +17,7 @@
 #        type: NC                  # normally closed
 
 switches:
+    # cabinet switches
     s_left_flipper_button:
         number: cab2408-0
         debounce: quick
@@ -41,12 +42,14 @@ switches:
         tags: right_upper_flipper
     s_right_upper_flipper_eos:
         number: play3208-12
+    # playfield switches
     s_left_slingshot:
         number: play3208-0
         debounce: quick
     s_right_slingshot:
         number: play3208-1
         debounce: quick
+    # trough switches
     s_ball_trough_one:
         number: play3208-2
         type: NC
