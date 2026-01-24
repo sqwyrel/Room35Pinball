@@ -1,0 +1,45 @@
+Room35Pinball installation instructions
+
+Install python 3.12.10 (64-bit) from python.org
+    Select Add python.exe to PATH when installing
+Download latest version of Godot from Godot from godotengine.org
+    Godot is a stand alone executable program and does not need to be installed.
+Install Visual Studio Code with default installation options
+Install GitHub Desktop app
+Create a folder called Room35Pinball in the Documents folder which will be the root directory of the project
+Clone repository at https://github.com/sqwyrel/Room35Pinball.git to this root directory
+    This repository contains all config files for MPF and Godot
+Create a python virtual environment to install and run MPF
+    Open a user PowerShell (PS C:\Users\Username>) and enter python -m venv mpfvenv
+    This creates a python virtual environment named mpfvenv
+    This only needs to be done once
+In order to be able to run scripts to activate the virtual environment, you need to do the following:
+    Open PowerShell as administrator (PS C:\WINDOWS\System32>) and enter Set-ExecutionPolicy Unrestricted -Force
+    This only needs to be done once
+To activate the MPV virtual environment
+    Open a user PowerShell (PS C:\Users\Username>)
+    Enter mpfvenv\Scripts\Activate.ps1
+    You will know that the virtual environment is active because it will add (mpfvenv) at the head of the prompt
+        (mpfvenv) PS C:\Users\Username>
+Install MPF within the virtual environment
+    You must be within the mpfvenv virtual environment in PowerShell to do this
+    Enter pip install mpf --pre 
+    The --pre command will install the latest version of mpf (which should be Mission Pinball Framework v0.80.0.dev11)
+To initialise MPF (not sure if you need to do this since the clone repository should have all of the necessary files)
+    Open a user PowerShell
+    Activate the mpfvenv
+    To verify the python version enter python --version
+    To verify the MPF version enter mpf --version
+    Go to the project directory which might be (mpfvenv) PS D:\Documents\Room35Pinball> 
+    Enter mpf init
+    You only need to do this once
+To run MPF without the Godot media controller
+    Open a user PowerShell
+    Activate the mpfvenv
+    Enter mpf -xtb
+To import the project into Godot
+    Open Godot
+    Select Import project
+    Select the root directory
+    The project should open up with all of the existing configs including .gitignore and .gitattributes
+Any changes to the root directory should be committed and pushed to Git with the Git Desktop app
