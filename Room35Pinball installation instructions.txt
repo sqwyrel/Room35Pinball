@@ -7,7 +7,7 @@ Download latest version of Godot from Godot from godotengine.org
 Install Visual Studio Code with default installation options
 Install GitHub Desktop app
 Create a folder called Room35Pinball in the Documents folder which will be the root directory of the project
-Clone repository at https://github.com/sqwyrel/Room35Pinball.git to this root directory
+Clone the repository at https://github.com/sqwyrel/Room35Pinball.git to this root directory
     This repository contains all config files for MPF and Godot
 Create a python virtual environment to install and run MPF
     Open a user PowerShell (PS C:\Users\Username>) and enter python -m venv mpfvenv

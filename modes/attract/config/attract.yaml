@@ -7,9 +7,13 @@ mode_settings:
   selectable_items:
     - title
     - credits
+    - last_scores_1p{machine.player1_score and not machine.player2_score}
+    - last_scores_2p{machine.player2_score and not machine.player3_score}
+    - last_scores_3p{machine.player3_score and not machine.player4_score}
+    - last_scores_4p{machine.player4_score}
     - mpf_logo
     - godot_logo
-  next_item_events: s_right_flipper_button_active
+  next_item_events: s_right_flipper_button_active, timer_attract_carousel_timer_complete
   previous_item_events: s_left_flipper_button_active
 
 slide_player:
@@ -19,3 +23,16 @@ sound_player:
   mode_attract_started:
     if-you-want-to-be-the-best:
       bus: music
+
+timers:
+  attract_carousel_timer:
+    end_value: 1
+    tick_interval: 3s
+    start_running: true
+    control_events:
+      - event: item_highlighted
+        action: restart
+      - event: flipper_cradle
+        action: stop
+      - event: flipper_cradle_release
+        action: restart
