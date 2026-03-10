@@ -2,9 +2,9 @@
 
 ball_devices:
     bd_trough:
-        ball_switches: s_ball_trough_one, s_ball_trough_two, s_ball_trough_three, s_ball_trough_four, s_ball_trough_five, s_ball_trough_six, s_ball_trough_jam
+        ball_switches: s_trough_one, s_trough_two, s_trough_three, s_trough_four, s_trough_five, s_trough_six, s_trough_jam
         eject_coil: c_trough_eject
-        jam_switch: s_ball_trough_jam
+        jam_switch: s_trough_jam
         eject_coil_jam_pulse: 15ms
         eject_targets: bd_plunger
         eject_timeouts: 3s

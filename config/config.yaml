@@ -12,18 +12,24 @@ config:
 # - sounds.yaml
 # - multiballs.yaml
 # - ballsaves.yaml
-# - keyboard.yaml
 
 modes:
     - attract
     - base
+    - bumpers
 
 playfields:
     playfield:
         default_source_device: bd_trough # or bd_plunger not totally sure yet
         tags: default
 
-virtual_platform_start_active_switches: s_ball_trough_one, s_ball_trough_two, s_ball_trough_three, s_ball_trough_four, s_ball_trough_five, s_ball_trough_six, s_ball_trough_jam
+virtual_platform_start_active_switches: 
+  - s_trough_one
+  - s_trough_two
+  - s_trough_three
+  - s_trough_four
+  - s_trough_five
+  - s_trough_six
 
 #hardware:
 #    platform: fast

@@ -55,18 +55,18 @@ coils:                                # need 20 total coil drivers from FAST pin
         platform_settings:
             recycle_ms: 10ms          # this is the cooldown time of the coil before it can fire again
             pwm2_ms: 15ms             # this is how long the hold time of the coil is
-#    c_autolauncher:
-#        number:
-#        default_pulse_ms: 20
-#    c_pop_bumper_G:
-#        number: 
-#        default_pulse_ms: 20
-#    c_pop_bumper_U:
-#        number: 
-#        default_pulse_ms: 20
-#    c_pop_bumper_Y:
-#        number: 
-#        default_pulse_ms: 20
+    c_autolauncher:
+        number:
+        default_pulse_ms: 20
+    c_pop_bumper_G:
+        number: 
+        default_pulse_ms: 20
+    c_pop_bumper_U:
+        number: 
+        default_pulse_ms: 20
+    c_pop_bumper_Y:
+        number: 
+        default_pulse_ms: 20
 #    c_reset_yeti_drop_target:
 #        number:
 #        default_pulse:
@@ -91,15 +91,15 @@ autofire_coils:
         coil: c_right_slingshot
         switch: s_right_slingshot
         enable_events: machine_reset_phase_3
-#    ac_pop_bumper_G:
-#        coil: c_pop_bumper_G
-#        switch: s_pop_bumper_G
-#    ac_pop_bumper_U:
-#        coil: c_pop_bumper_U
-#        switch: s_pop_bumper_U
-#    ac_pop_bumper_Y:
-#        coil: c_pop_bumper_Y
-#        switch: s_pop_bumper_Y
+    ac_pop_bumper_G:
+        coil: c_pop_bumper_G
+        switch: s_pop_bumper_G
+    ac_pop_bumper_U:
+        coil: c_pop_bumper_U
+        switch: s_pop_bumper_U
+    ac_pop_bumper_Y:
+        coil: c_pop_bumper_Y
+        switch: s_pop_bumper_Y
 
 flippers:
     left_flipper:

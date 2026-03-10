@@ -1,0 +1,22 @@
+#config_version=6
+
+mode:
+  start_events: start_mode_bumpers
+  stop_events: stop_mode_bumpers
+  priority: 200
+
+shots:
+  pop_bumper_G:
+    switch: s_pop_bumper_G
+  pop_bumper_U:
+    switch: s_pop_bumper_U
+  pop_bumper_Y:
+    switch: s_pop_bumper_Y
+
+shot_groups:
+  pop_bumpers:
+    shots: pop_bumper_G, pop_bumper_U, pop_bumper_Y
+
+variable_player:
+  pop_bumpers_hit:
+    score: 1_000
