@@ -21,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.47843137, 0.23137255, 0.49019608, 1)
+color = Color(0.107795216, 0.34480062, 1, 1)
 
 [node name="MPFCarousel" type="Control" parent="."]
 layout_mode = 1
@@ -35,18 +35,18 @@ carousel_name = "attract"
 metadata/_custom_type_script = "uid://dpe3dq8axt3g7"
 
 [node name="title" type="Label" parent="MPFCarousel"]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/outline_size = 20
-theme_override_font_sizes/font_size = 150
-text = "The 
-Room 35 Downhill
-Pinball"
+theme_override_colors/font_color = Color(0.827451, 0.73333335, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 160
+text = "The Room 35
+Downhill"
 horizontal_alignment = 1
 vertical_alignment = 1
 

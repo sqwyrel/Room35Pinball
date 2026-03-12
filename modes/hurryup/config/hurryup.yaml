@@ -1,0 +1,32 @@
+#config_version=6
+
+mode:
+    start_events: start_mode_hurryup
+    stop_events: stop_mode_hurryup
+    priority: 1000
+
+event_player:
+    timer_hurryup_timer_complete: stop_mode_hurryup
+    hurryup_hit: stop_mode_hurryup
+    timer_hurryup_timer_tick:
+        hurryup_value:
+            current_hurryup:
+                type: int
+                value: 1_000_000 - ticks - 20_000
+
+shots:
+    hurryup:
+        switch: s_center_lane_exit
+
+slide_player:
+    mode_hurryup_started: hurryup
+
+timers:
+    hurryup_timer:
+        end_value: 25 # this is the numer of ticks
+        start_running: true
+        tick_interval: 200ms # this is the length of the tick / without this the default is 1 sec
+
+variable_player:
+    hurryup_hit:
+        score: 1_000_000 - device.timers.hurryup_timer.ticks * 20_000

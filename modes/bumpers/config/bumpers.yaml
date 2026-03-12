@@ -5,7 +5,11 @@ mode:
   stop_events: stop_mode_bumpers
   priority: 200
 
-shots:
+# config files for all modes must have a mode declaration entry to indicate start and stop events
+# the start and stop events are called by the event player in base mode
+# all modes are stacked on base mode (priority: 100)
+
+shots: 
   pop_bumper_G:
     switch: s_pop_bumper_G
   pop_bumper_U:
@@ -13,10 +17,33 @@ shots:
   pop_bumper_Y:
     switch: s_pop_bumper_Y
 
+# shots are in game events that cause mpf to do somthing
+# shots can be enabled or disabled
+# shots can score points
+# shots can be associated with specific lights or variables
+
 shot_groups:
   pop_bumpers:
     shots: pop_bumper_G, pop_bumper_U, pop_bumper_Y
 
+# a shot group can include any or all of the shots defined above
+# if any shot is hit then the shot group will be hit
+
 variable_player:
-  pop_bumpers_hit:
-    score: 1_000
+  pop_bumpers_hit:  # this is the shot group
+    score: 1_000    # when the shot grooup is hit points will be scored
+
+# a variable_player can change player variables or machine variables
+# a variable_player for player variables can only be used in mode config files
+# a variable_player for machine variables can be used in the main config file
+
+# key built-in player variables: 
+#   score: current player's score.
+#   ball: current ball number.
+#   player_num: the player's number (1, 2, 3, 4).
+#   extra_balls: number of extra balls earned.
+#   extra_ball_(name)_awarded: specific named extra ball status.
+#   logic_block_state: state of active logic blocks.
+#   (mode)_(timer)_tick: time remaining in active mode timers.
+#   random_(x): random numbers generated for the player.
+#   restart_modes_on_next_ball: internal state variable. 

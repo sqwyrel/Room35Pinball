@@ -1,0 +1,71 @@
+#config_version=6
+
+# variable_player:
+#   shot1_hit:
+#     bonus_shot1: 1
+#   jackpot:
+#     jackpot: 1
+#   nuts_collected:
+#     nuts_collected_bonus_multiplier: 1
+#   mode1_complete:
+#     mode1_bonus_multiplier: 1
+
+# mode_settings:
+#   display_delay_ms: 1s
+#   hurry_up_delay_ms: 0
+#   bonus_entries:
+#     - event: bonus_shot1
+#       score: 10_000
+#     - event: jackpot
+#       score: 100_000
+#     - nuts_collected
+#       score: 10_000 * (current_player.nuts_collected_bonus_multiplier)
+#     - event: mode1_complete
+#       score: 25_000 * (current_player.mode1_bonus_multiplier + 2)
+# slide_player:
+#   mode_bonus_started: bonus_start_slide
+#   bonus_ramps: bonus_ramp_slide
+#   bonus_math: bonus_math_slide
+#   bonus_total: bonus_total_slide
+# slides:
+#   bonus_start_slide:
+#     widgets:
+#       - type: text
+#         text: Bonus
+#   bonus_ramp_slide:
+#     - type: text
+#       text: "Ramps (player|level)"
+#     - type: text
+#       text: (score)
+#   bonus_math_slide:
+#     - type: text
+#       text: "Some variable (player|some_variable)"
+#     - type: text
+#       text: (score)
+#   bonus_multiplier_slide:
+#     - type: text
+#       text: "Multiplier"
+#     - type: text
+#       text: "(multiplier)X"
+#   bonus_total_slide:
+#     - type: text
+#       text: "Total Bonus"
+#     - type: text
+#       text: (score)
+
+
+##! test
+#! start_game
+#! advance_time_and_run 1
+#! drain_all_balls
+#! advance_time_and_run .1
+#! assert_text_on_top_slide "Ramps 0"
+#! assert_text_on_top_slide "400"
+#! advance_time_and_run 1
+#! assert_text_on_top_slide "Some variable 0"
+#! assert_text_on_top_slide "2400"
+#! advance_time_and_run 1
+#! assert_text_on_top_slide "Total Bonus"
+#! assert_text_on_top_slide "2800"
+#! stop_game 10
+#! advance_time_and_run 1

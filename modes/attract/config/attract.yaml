@@ -1,8 +1,5 @@
 #config_version=6
 
-# Attract mode that starts when the machine boots up, stops
-# whenever a game is started, and re-starts after the game ends.
-
 mode_settings:
   selectable_items:
     - title
@@ -36,10 +33,10 @@ timers:
         action: stop
       - event: flipper_cradle_release
         action: restart
-  attract_music_timer:
-    start_running: true
-    tick_interval: 10s # Triggers every 10 seconds
-    events_when_done: attract_music_trigger # Post this event when time is up
-    control_events:
-      - event: timer_attract_music_timer_done
-        action: restart # Loop the timer
+  # attract_music_timer:
+  #   start_running: true
+  #   tick_interval: 10s # Triggers every 10 seconds
+  #   events_when_done: attract_music_trigger # Post this event when time is up
+  #   control_events:
+  #     - event: timer_attract_music_timer_done
+  #       action: restart # Loop the timer

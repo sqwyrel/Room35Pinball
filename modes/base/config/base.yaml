@@ -1,8 +1,5 @@
 #config_version=6
 
-# Base mode that starts at the beginning of each ball
-# and stops at the end of each ball.
-
 mode:
   start_events: ball_starting
   stop_events: ball_will_end
@@ -13,6 +10,11 @@ event_player:
     - start_mode_bumpers
   mode_base_will_stop:
     - stop_mode_bumpers
+  left_lane_hit: start_mode_hurryup
+
+shots:
+  center_lane_exit:
+    switches: s_center_lane_exit
 
 slide_player:
   mode_base_started: base

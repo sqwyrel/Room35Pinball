@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.84902, 0.5410288, 0.19244072, 1)
+color = Color(0.105882354, 0.34509805, 1, 1)
 
 [node name="player_score" type="Label" parent="."]
 layout_mode = 1
@@ -31,6 +31,8 @@ offset_top = -82.5
 offset_bottom = 82.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0.827451, 0.73333335, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 20
 theme_override_font_sizes/font_size = 140
 text = "1,940,000"
@@ -40,4 +42,54 @@ script = ExtResource("2_06ewq")
 variable_name = "score"
 comma_separate = true
 min_digits = 2
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -137.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_bottom = 60
+
+[node name="player_number" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.827451, 0.73333335, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 100
+text = "Player 1"
+script = ExtResource("2_06ewq")
+variable_name = "number"
+template_string = "Player %s"
+min_players = 2
+metadata/_custom_type_script = "uid://bfvhmv2eirpua"
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -137.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 60
+
+[node name="player_ball" type="Label" parent="MarginContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.827451, 0.73333335, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 100
+text = "Ball 1"
+horizontal_alignment = 2
+script = ExtResource("2_06ewq")
+variable_name = "ball"
+template_string = "Ball %s"
 metadata/_custom_type_script = "uid://bfvhmv2eirpua"
