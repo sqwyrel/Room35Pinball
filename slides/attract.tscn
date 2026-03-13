@@ -35,6 +35,7 @@ carousel_name = "attract"
 metadata/_custom_type_script = "uid://dpe3dq8axt3g7"
 
 [node name="title" type="Label" parent="MPFCarousel"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -80,7 +81,6 @@ scale = Vector2(2, 2)
 texture = ExtResource("5_cq3lo")
 
 [node name="last_scores_1p" type="Node2D" parent="MPFCarousel"]
-visible = false
 
 [node name="player1_score" type="Label" parent="MPFCarousel/last_scores_1p"]
 custom_minimum_size = Vector2(1920, 1080)

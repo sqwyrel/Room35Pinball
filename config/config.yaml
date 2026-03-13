@@ -18,7 +18,7 @@ modes:
     - base
     - bumpers
     - hurryup
-    - bonus
+#   - bonus
 
 playfields:
     playfield:
@@ -29,9 +29,9 @@ virtual_platform_start_active_switches:
   - s_trough_one
   - s_trough_two
   - s_trough_three
-  - s_trough_four
-  - s_trough_five
-  - s_trough_six
+  # - s_trough_four
+  # - s_trough_five
+  # - s_trough_six
 
 #hardware:
 #    platform: fast
